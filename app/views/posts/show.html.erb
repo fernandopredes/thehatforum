@@ -1,0 +1,5 @@
+<h1><%=@post.title %></h1>
+<p><%=@post.content %></p>
+<%= link_to "Editar", edit_post_path(@post) %>
+<%= link_to "Deletar", post_path(@post), method: :delete, data: { confirm: "Tem certeza ?" } %>
+<%= link_to "Página principal", root_path %>
