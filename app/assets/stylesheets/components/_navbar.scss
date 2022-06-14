@@ -1,47 +1,52 @@
-.wrapper {
-  width: 60%;
-  max-width: 1140px;
-  margin: 0 auto;
- }
-
-
-
- .clearfix:before, .clearfix:after {
-  content: " ";
-  display: table;
- }
-
- .clearfix:after {
-  clear: both;
- }
-
- .main_header {
-  width: 80%;
+.navbar-hat {
+  justify-content: space-between;
+  height: 80px;
   width: 100%;
-  margin: 0 auto;
-  background-color: azure;
-  #logo {
-   float: left;
-   a {
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: -1px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #397CAC;
-   }
-  }
+  position: relative;
+  z-index: 1;
+  margin-bottom: -1px;
+  background-color: rgba(0, 0, 0, 0.4);
+  	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .2);
+	   -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .2);
+	        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .2);
+}
 
-  #buttons {
-    float: right;
-    a {
-     line-height: 60px;
-     background: #397CAC;
-     padding: .5em 1em;
-     border-radius: 0.2em;
-     color: white;
-     text-decoration: none;
-     font-weight: 100;
-    }
-   }
- }
+.navbar-hat .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-hat .navbar-nav {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar-hat .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar-hat .nav-user:hover {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.navbar-hat .navbar-brand img {
+  width: 70px;
+  opacity: 0.8;
+}
+
+.navbar-hat .navbar-brand img:hover {
+  opacity: 1;
+}
+
+.container-fluid {
+  width: 100vw;
+  padding: 0 200px;
+}
+
+.nav-user {
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding-right: 1em !important;
+}
+
+.nav-user:hover {
+  color: rgba(255, 255, 255, 1) !important;
+  text-decoration: underline;
+}
