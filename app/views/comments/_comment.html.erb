@@ -1,6 +1,6 @@
 <div class="comment">
   <p class="comment_content"><%= comment.comment %></p>
-  <p class="comment_author"><%= comment.user.email %></p>
+  <p class="comment_author"><%= comment.user.username %></p>
   <%= link_to "Deletar", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" } %>
   <%= link_to "Editar", edit_post_comment_path(comment.post, comment) %>
 </div>
