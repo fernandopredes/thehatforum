@@ -2,6 +2,13 @@
   <h1><%= @post.title %></h1>
   <p><%= @post.content %></p>
 </div>
+<div id="comments">
+  <h2><%= @post.comments.count %></h2>
+  <%= render @post.comments %>
+</div>
+<h3>Reply to thread<%= render "comments/form" %></h3>
+
+
 <%= link_to "Editar", edit_post_path(@post) %>
 <%= link_to "Deletar", post_path(@post), method: :delete, data: { confirm: "Tem certeza ?" } %>
 <%= link_to "Página principal", root_path %>
