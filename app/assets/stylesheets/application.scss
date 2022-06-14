@@ -14,3 +14,36 @@
  *= require_self
  */
  @import "bootstrap";
+ @import "components/index";
+ @import "posts";
+
+
+ body {
+  font-family: 'Lato', sans-serif;
+  background: #EDEFF0;
+}
+
+#posts {
+  background: white;
+  padding: 2em 5%;
+  border-radius: .5em;
+  .post {
+   margin: 1em 0;
+   padding: 1em 0;
+   border-bottom: 1px solid #D1d1d1;
+   .title {
+    margin: 0;
+    a {
+     color: #397CAC;
+     text-decoration: none;
+     font-weight: 100;
+     font-size: 1.25rem;
+    }
+   }
+   .date {
+    margin-top: .25rem;
+    font-size: 0.9rem;
+    color: #B2BAC2;
+   }
+  }
+ }
