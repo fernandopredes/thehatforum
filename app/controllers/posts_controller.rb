@@ -2,38 +2,48 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index]
   def index
-    @posts = Post.all.order('created_at DESC')
+    # @posts = Post.all.order('created_at DESC')
+    @posts = policy_scope(Post).order(created_at: :desc)
   end
 
   def new
+
     @post = current_user.posts.build
+    authorize @post
   end
 
   def create
     @post = current_user.posts.build(post_params)
-      if @post.save
-        redirect_to @post
-      else
-        render 'new'
-      end
+
+    if @post.save
+      redirect_to @post
+    else
+      render 'new'
+    end
+    authorize @post
   end
 
   def show
+    authorize @post
     @post = Post.find(params[:id])
   end
 
   def edit
+    authorize @post
   end
 
   def update
+    authorize @post
     if @post.update(post_params)
       redirect_to @post
     else
       render 'edit'
     end
+
   end
 
   def destroy
+    authorize @post
     @post.destroy
     redirect_to root_path
   end
