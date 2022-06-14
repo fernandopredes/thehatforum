@@ -47,3 +47,21 @@
    }
   }
  }
+
+ #comments {
+  .comment {
+   border-bottom: 1px solid #d1d1d1;
+   padding-bottom: 1em;
+   margin-bottom: 1em;
+   .comment_content {
+    margin: 0;
+    padding: 0;
+   }
+   .comment_author {
+    color: #397CAC;
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 700;
+   }
+  }
+ }
