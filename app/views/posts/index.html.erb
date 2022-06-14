@@ -1,11 +1,26 @@
-<div id="posts">
-  <%@posts.each do |post| %>
-  <div class="post">
-    <h2 class="title"><%= link_to post.title, post %></h2>
-    <div class="date">
-      <p>Published at <%= time_ago_in_words(post.created_at) %></p>
-      <p>Published by: <%= post.user.username %></p>
+<div class="row">
+  <div class="col-8">
+    <div id="posts">
+      <%@posts.each do |post| %>
+      <div class="post">
+        <h2 class="title"><%= link_to post.title, post %></h2>
+        <div class="date">
+          <p>Published at <%= time_ago_in_words(post.created_at) %></p>
+          <p>Published by: <%= post.user.username %></p>
+        </div>
+      </div>
+      <% end %>
     </div>
   </div>
-  <% end %>
+
+  <div class="col-4">
+    <div id="posts">
+      <div id="menu">
+          <p><a href="#">Front-End</a></p>
+          <p><a href="#">Back-End</a></p>
+          <p><a href="#">Game Dev</a></p>
+          <p><a href="#">Data Science</a></p>
+      </div>
+    </div>
+  </div>
 </div>
