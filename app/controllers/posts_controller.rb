@@ -39,21 +39,21 @@ class PostsController < ApplicationController
   end
 
   def frontend
-    @posts = Post.where(category: 'Front-End')
+    @posts = Post.where(category: 'Front-End').order('created_at DESC')
   end
 
   def backend
-    @posts = Post.where(category: 'Back-End')
+    @posts = Post.where(category: 'Back-End').order('created_at DESC')
   end
 
   def gamedev
-    @posts = Post.where(category: 'GameDev')
+    @posts = Post.where(category: 'GameDev').order('created_at DESC')
   end
 
   def datascience
-    @posts = Post.where(category: 'Data Science')
+    @posts = Post.where(category: 'Data Science').order('created_at DESC')
   end
-
+  
   private
 
   def post_params
