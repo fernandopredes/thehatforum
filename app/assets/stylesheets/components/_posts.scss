@@ -2,13 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 #post_content {
-  background: white;
+  background: #383E60;
   padding: 2em 5%;
   border-radius: .5em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   h1 {
    font-weight: 100;
    font-size: 2em;
-   color: #397CAC;
+   color: #F5F5F5;
    margin-top: 0;
   }
   p {
@@ -34,4 +35,4 @@
     }
    }
   }
- }
+}
