@@ -1,5 +1,6 @@
 <h1>Test</h1>
 <%= simple_form_for @post do |f| %>
+  <%= f.input :category, collection: ['Front-End', 'Back-End', 'GameDev', 'Data Science'], label: 'Category:', error: 'Please, choose the post category.' %>
   <%= f.input :title %>
   <%= f.input :content %>
   <%= f.button :submit %>

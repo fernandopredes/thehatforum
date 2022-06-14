@@ -5,8 +5,8 @@ Rails.application.routes.draw do
     resources :comments
   end
   root 'posts#index'
-  get '/posts/frontend', to: 'posts#frontend'
-  get '/posts/backend', to: 'posts#backend'
-  get '/posts/gamedev', to: 'posts#gamedev'
-  get '/posts/datascience', to: 'posts#datascience'
+  get '/frontend', to: 'posts#frontend'
+  get '/backend', to: 'posts#backend'
+  get '/gamedev', to: 'posts#gamedev'
+  get '/datascience', to: 'posts#datascience'
 end

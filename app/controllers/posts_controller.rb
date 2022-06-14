@@ -39,13 +39,25 @@ class PostsController < ApplicationController
   end
 
   def frontend
+    @posts = Post.where(category: 'Front-End')
+  end
 
+  def backend
+    @posts = Post.where(category: 'Back-End')
+  end
+
+  def gamedev
+    @posts = Post.where(category: 'GameDev')
+  end
+
+  def datascience
+    @posts = Post.where(category: 'Data Science')
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :category)
   end
 
   def find_post
