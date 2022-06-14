@@ -12,7 +12,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item pr-3">
-            <span class="nav-link pt-3">Welcome, <span class="nav-user"><%= current_user.email %></span></span>
+            <span class="nav-link pt-3">Welcome, <span class="nav-user"><%= current_user.username %></span></span>
           </li>
 
           <li class="nav-item dropdown">
