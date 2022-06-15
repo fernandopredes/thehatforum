@@ -6,20 +6,19 @@ class PostsController < ApplicationController
     @posts = policy_scope(Post).order(created_at: :desc)
     if params[:category]
       case params[:category]
-      when "frontend"
+      when 'frontend'
         @posts = @posts.where(category: 'Front-End').order('created_at DESC')
-      when "backend"
+      when 'backend'
         @posts = @posts.where(category: 'Back-End').order('created_at DESC')
-      when "gamedev"
+      when 'gamedev'
         @posts = @posts.where(category: 'GameDev').order('created_at DESC')
-      when "datascience"
+      when 'datascience'
         @posts = @posts.where(category: 'Data Science').order('created_at DESC')
       end
     end
   end
 
   def new
-
     @post = current_user.posts.build
     authorize @post
   end
@@ -51,31 +50,12 @@ class PostsController < ApplicationController
     else
       render 'edit'
     end
-
   end
 
   def destroy
     authorize @post
     @post.destroy
     redirect_to root_path
-  end
-
-  def frontend
-    # @posts = Post.where(category: 'Front-End').order('created_at DESC')
-
-    @posts = policy_scope(Post).where(category: 'Front-End').order(created_at: :desc)
-  end
-
-  def backend
-    @posts = Post.where(category: 'Back-End').order('created_at DESC')
-  end
-
-  def gamedev
-    @posts = Post.where(category: 'GameDev').order('created_at DESC')
-  end
-
-  def datascience
-    @posts = Post.where(category: 'Data Science').order('created_at DESC')
   end
 
   private
