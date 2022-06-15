@@ -21,10 +21,10 @@
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
  body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto Flex', sans-serif;
   background-color: #161930;
   background-image: image-url('pattern.jpg');
     background-repeat: repeat;
@@ -71,10 +71,22 @@
  }
 
  #comments {
+  a{
+    text-decoration: none;
+    color: #E8DEB9;
+    font-size: 14px;
+    &:hover {
+      color:white;
+    }
+
+  }
   .comment {
-   border-bottom: 1px solid #d1d1d1;
-   padding-bottom: 1em;
+   border: 2px solid #D1C3A9;
+   padding: 40px 15px;
    margin-bottom: 1em;
+   background-color: #2a3152;
+   border-radius: 25px;
+   font-size: 20px;
    .comment_content {
     margin: 0;
     padding: 0;
@@ -118,6 +130,7 @@
 
 
 .newpost{
+  font-family: 'Roboto Flex', sans-serif;
   background-color: #383e60;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   color: #E8DEB9;
@@ -125,13 +138,31 @@
   padding: 0 25px;
 }
 
+.postmaster #post_content{
+  background-color: #E8DEB9;
+  border:  2px solid #D1C3A9;
+
+}
+
 #post_content{
+
+  padding: 0;
   margin: 0;
   background-color:#E8DEB9;
   resize: none;
   box-shadow: none;
-  p{
+  p, h1{
+    font-family: 'Roboto Flex', sans-serif;
     color: #383E60;
+    padding: 5px;
+  }
+
+  p{
+    font-size: 18px;
+  }
+
+  h1{
+    font-weight: bold;
   }
 }
 
@@ -147,4 +178,48 @@
 .new_post .btn{
   margin: 25px 0;
   background-color: #D1C3A9;
+}
+
+#comment_comment{
+  padding: 0;
+  margin-bottom: 25px;
+  background-color:#E8DEB9;
+  resize: none;
+  box-shadow: none;
+  p, h1{
+    font-family: 'Roboto Flex', sans-serif;
+    color: #383E60;
+    padding: 5px;
+  }
+}
+
+input[type=text] {
+  padding:5px;
+  border:2px solid #D1C3A9;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+input[type=text]:focus {
+  border-color:#333;
+}
+
+input[type=submit] {
+  padding:5px 15px;
+  background:#E8DEB9;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.bottommenu{
+  a{
+    text-decoration: none;
+    color: #E8DEB9;
+    font-size: 14px;
+    &:hover {
+      color:white;
+    }
+}
 }

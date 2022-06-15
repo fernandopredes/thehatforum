@@ -1,17 +1,30 @@
-<div class="newpost my-4">
-  <div id="post_content">
-    <h1><%= @post.title %></h1>
-    <p><%= @post.content %></p>
+<div class="newpost my-4 py-4">
+  <div class="row">
+    <div class="col-9  mx-auto postmaster">
+      <div id="post_content">
+        <h1><%= @post.title %></h1>
+        <p><%= @post.content %></p>
+      </div>
+    </div>
   </div>
-  <div id="comments">
-    <h2><%= @post.comments.count %></h2>
-    <%= render @post.comments %>
-  </div>
-  <h3>Reply to thread<%= render "comments/form" %></h3>
-
-  <% if policy(@post).edit? %>
-    <%= link_to "Editar", edit_post_path(@post) %>
-    <%= link_to "Deletar", post_path(@post), method: :delete, data: { confirm: "Tem certeza ?" } %>
-  <% end %>
-  <%= link_to "Página principal", root_path %>
+  <div class="row">
+    <div class="col-9 mx-auto my-4 py-2">
+      <div id="comments">
+        <h5>Comentários: <%= @post.comments.count %></h5>
+        <%= render @post.comments %>
+      </div>
+      <h5><%= render "comments/form" %></h5>
+       <div class="bottommenu">
+        <% if policy(@post).edit? %>
+          <%= link_to "Editar", edit_post_path(@post) %>
+          <%= link_to "Deletar", post_path(@post), method: :delete, data: { confirm: "Tem certeza ?" } %>
+        <% end %>
+          <div class="text-end">
+            <%= link_to root_path do %>
+              <i class="fa-solid fa-house"></i><span> Página Inicial</span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
