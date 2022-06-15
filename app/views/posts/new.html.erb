@@ -1,7 +1,13 @@
-<h1>Test</h1>
-<%= simple_form_for @post do |f| %>
-  <%= f.input :category, collection: ['Front-End', 'Back-End', 'GameDev', 'Data Science'], label: 'Category:', error: 'Please, choose the post category.' %>
-  <%= f.input :title %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-6 mx-auto  newpost">
+      <h1 class="text-center mt-2">Criar Post</h1>
+      <%= simple_form_for @post do |f| %>
+        <%= f.input :category, collection: ['Front-End', 'Back-End', 'GameDev', 'Data Science'], label: 'Category:', error: 'Please, choose the post category.' %>
+        <%= f.input :title %>
+        <%= f.input :content %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
