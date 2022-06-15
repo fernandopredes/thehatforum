@@ -6,6 +6,7 @@ class PostPolicy < ApplicationPolicy
     end
   end
 
+
   def new?
     true
   end

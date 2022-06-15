@@ -18,10 +18,19 @@
       <div id="menu">
         <p><%= link_to root_path, class: "d-flex justify-content-between icon" %><span>All Discussions</span><%= image_tag "comment-regular.svg", width: "33px" %></a></p>
         <hr>
-        <p><a href="/frontend" class="d-flex justify-content-between icon"><span>Front-End</span><%= image_tag "frontend.svg", width: "33px" %> </a></p>
-        <p><a href="/backend" class="d-flex justify-content-between icon"><span>Back-End</span><%= image_tag "backend.svg", width: "33px" %> </a></p>
-        <p><a href="/gamedev" class="d-flex justify-content-between icon"><span>Game Dev</span><%= image_tag "game.svg", width: "33px" %> </a></p>
-        <p><a href="/datascience" class="d-flex justify-content-between icon"><span>Data Science</span><%= image_tag "data.svg", width: "33px" %> </a></p>
+
+        <p><%= link_to posts_path(category: "frontend"), class: "d-flex justify-content-between icon" do %>
+          <span>Front-End</span><%= image_tag "frontend.svg", width: "33px" %> </a>
+        <% end %></p>
+        <p><%= link_to posts_path(category: "backend"), class: "d-flex justify-content-between icon" do %>
+          <span>Front-End</span><%= image_tag "backend.svg", width: "33px" %> </a>
+        <% end %></p>
+        <p><%= link_to posts_path(category: "gamedev"), class: "d-flex justify-content-between icon" do %>
+          <span>Front-End</span><%= image_tag "game.svg", width: "33px" %> </a>
+        <% end %></p>
+        <p><%= link_to posts_path(category: "datascience"), class: "d-flex justify-content-between icon" do %>
+          <span>Front-End</span><%= image_tag "data.svg", width: "33px" %> </a>
+        <% end %></p>
       </div>
     </div>
   </div>
