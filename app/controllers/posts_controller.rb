@@ -1,9 +1,21 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :frontend]
   def index
     # @posts = Post.all.order('created_at DESC')
     @posts = policy_scope(Post).order(created_at: :desc)
+    if params[:category]
+      case params[:category]
+      when "frontend"
+        @posts = @posts.where(category: 'Front-End').order('created_at DESC')
+      when "backend"
+        @posts = @posts.where(category: 'Back-End').order('created_at DESC')
+      when "gamedev"
+        @posts = @posts.where(category: 'GameDev').order('created_at DESC')
+      when "datascience"
+        @posts = @posts.where(category: 'Data Science').order('created_at DESC')
+      end
+    end
   end
 
   def new
@@ -49,7 +61,9 @@ class PostsController < ApplicationController
   end
 
   def frontend
-    @posts = Post.where(category: 'Front-End').order('created_at DESC')
+    # @posts = Post.where(category: 'Front-End').order('created_at DESC')
+
+    @posts = policy_scope(Post).where(category: 'Front-End').order(created_at: :desc)
   end
 
   def backend
@@ -63,7 +77,7 @@ class PostsController < ApplicationController
   def datascience
     @posts = Post.where(category: 'Data Science').order('created_at DESC')
   end
-  
+
   private
 
   def post_params
