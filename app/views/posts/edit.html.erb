@@ -1,7 +1,13 @@
-<h1>Edit</h1>
-<%= simple_form_for @post do |f| %>
-  <%= f.input :title %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
-<% end %>
-<%= link_to "Cancelar", post_path %>
+<div class=" my-5 row">
+  <div class="col-8 mx-auto py-4 newpost">
+    <h1>Edit</h1>
+    <%= simple_form_for @post do |f| %>
+      <%= f.input :title %>
+      <%= f.input :content %>
+      <%= f.button :submit %>
+    <% end %>
+    <div class="cancelar mt-4">
+      <%= link_to "Cancelar", post_path %>
+    </div>
+  <div>
+</div>

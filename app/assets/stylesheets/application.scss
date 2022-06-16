@@ -118,6 +118,7 @@
 
  .black-wizard{
   font-size: 20px;
+  border-radius: 25px;
   text-transform: uppercase;
   color: #E8DEB9;
   padding: 10px 40px;
@@ -147,7 +148,7 @@
 #post_content{
 
   padding: 0;
-  margin: 0;
+  margin: 0 0 25px 0;
   background-color:#E8DEB9;
   resize: none;
   box-shadow: none;
@@ -186,6 +187,7 @@
   background-color:#E8DEB9;
   resize: none;
   box-shadow: none;
+  overflow:hidden;
   p, h1{
     font-family: 'Roboto Flex', sans-serif;
     color: #383E60;
@@ -222,4 +224,13 @@ input[type=submit] {
       color:white;
     }
 }
+}
+
+.cancelar a{
+  text-decoration: none;
+  color: #E8DEB9;
+  font-size: 14px;
+  &:hover {
+    color:white;
+  }
 }

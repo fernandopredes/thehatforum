@@ -1,5 +1,9 @@
-<h1>Editar comentário</h1>
-<%= simple_form_for([@post, @comment]) do |f|  %>
-  <%= f.input :comment %>
-  <%= f.submit %>
-<% end %>
+<div class=" my-5 row">
+  <div class="col-8 mx-auto py-4 newpost">
+    <h1>Editar comentário</h1>
+    <%= simple_form_for([@post, @comment]) do |f|  %>
+      <%= f.input :comment %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
