@@ -137,6 +137,15 @@
   color: #E8DEB9;
   border-radius: 25px;
   padding: 0 25px;
+  a{
+    margin-top: 20px;
+    text-decoration: none;
+    color: #E8DEB9;
+    font-size: 14px;
+    &:hover {
+      color:white;
+    }
+}
 }
 
 .postmaster #post_content{
